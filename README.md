@@ -3,20 +3,6 @@
 ```php
 $students = array('student'=>'Tristan', 'Josh', 'Bogdan', 'student2'=>'Lazlo', 'Keith', 'Will', 'Curtis', 'Joe', 'Kochan', 'Patrick', 'Jonathan', 'Jeremy');
 
-$students1 = array(
-	'Tristan', 
-	'Josh', 
-	'Bogdan', 
-	'Lazlo', 
-	'Keith', 
-	'Will', 
-	'Curtis', 
-	'Joe', 
-	'Kochan', 
-	'Patrick', 
-	'Jonathan', 
-	'Jeremy'
-);
 $students2 = array(
 	'student0' => 'Tristan', 
 	'student1' => 'Josh', 
@@ -47,11 +33,11 @@ print "</pre>";
 	if(!$db_selected){
 		die("Cannot use database phpsandbox:" . mysql_error());
 	}
-	```
-	###Dowloaded Meekro (meekrodb.2.3.class.php) and put in Directory
-	###Connected to Meekro DB
-	```php
-	require_once 'meekrodb.2.3.class.php';
+```
+###Dowloaded Meekro (meekrodb.2.3.class.php) and put in Directory
+###Connected to Meekro DB
+```php
+require_once 'meekrodb.2.3.class.php';
 DB::$user = 'x';
 DB::$password = 'x';
 DB::$dbName = 'phpsandbox';
