@@ -34,6 +34,17 @@ print "</pre>";
 		die("Cannot use database phpsandbox:" . mysql_error());
 	}
 ```
+###Inserted Students into mySQL DB
+```php
+
+
+ foreach($students as $student){
+ 	$query = "INSERT INTO students (name) VALUES ('".$student."')";
+ 	print $query;
+ 	print "<br />";
+ 	mysql_query($query);
+ }
+ ```
 ###Dowloaded Meekro (meekrodb.2.3.class.php) and put in Directory
 ###Connected to Meekro DB
 ```php
@@ -43,3 +54,13 @@ DB::$password = 'x';
 DB::$dbName = 'phpsandbox';
 DB::$host = '127.0.0.1';
 ```
+###Now can Write Meekro Statements
+```php
+foreach($students as $student){
+	// insert a new student
+	DB::insert('students', array(
+ 	  'name' => $student
+ 	));
+ }
+ $students = DB::query("SELECT * FROM students".$limit);
+ ```
